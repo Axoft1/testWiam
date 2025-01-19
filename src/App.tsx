@@ -1,25 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter, Route, Link, Routes } from "react-router";
+import PersonalInformation from './modules/PersonalInformation/PersonalInformation';
+import LoanParameters from './modules/LoanParameters/LoanParameters';
+import { Paths } from './types/routesTypes';
+import { FormProvider } from './context/FormContext/FormProvider';
+import AddresPlaceWork from './modules/AddresPlaceWork/AddresPlaceWork';
+
 
 function App() {
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <FormProvider>
+
+      <div className="App">
+        <BrowserRouter>
+          <Routes>
+            <Route path={Paths.personalInformation} element={<PersonalInformation />} />
+            <Route path={Paths.loanParameters} element={<LoanParameters />} />
+            <Route path={Paths.addresPlaceWork} element={<AddresPlaceWork />} />
+          </Routes>
+        </BrowserRouter>
+      </div>
+    </FormProvider>
   );
 }
 

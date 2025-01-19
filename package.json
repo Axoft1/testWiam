@@ -10,8 +10,11 @@
     "@types/node": "^16.18.124",
     "@types/react": "^18.3.18",
     "@types/react-dom": "^18.3.5",
+    "antd": "^5.23.1",
+    "antd-mask-input": "^2.0.7",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-router-dom": "^7.1.2",
     "react-scripts": "5.0.1",
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
@@ -39,5 +42,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "ajv": "^7.2.4",
+    "sass": "^1.83.4"
   }
 }
